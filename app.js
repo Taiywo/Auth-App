@@ -5,16 +5,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const auth = require("./auth");
 
-app.set('view-engine', 'ejs')
-
-
-app.get('/register', (req, res) => {
-    res.render('register.ejs')
-})
-app.get('/login', (req, res) => {
-    res.render('login.ejs')
-})
-
 
 // authentication endpoint
 app.get("/auth-endpoint", auth, (request, response) => {
